@@ -7,4 +7,8 @@ import org.springframework.http.codec.ServerCodecConfigurer;
 @Configuration
 public class Config {
 
+    @Bean
+    public ServerCodecConfigurer serverCodecConfigurer() {
+        return ServerCodecConfigurer.create();
+    }
 }
