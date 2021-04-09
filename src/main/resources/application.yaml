@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: api-gateway
+eureka:
+  instance:
+    prefer-ip-address: ${preferIp:true}
+    data-center-info: ${dataCenter:Amazon}
+  client:
+    register-with-eureka: ${registerWithEureka:true}
+    fetch-registry: ${fetchRegistry:true}
+    service-url:
+       defaultZone: ${defaultZone:http://172.31.17.185:8761/eureka}
+server:
+  port: 80
