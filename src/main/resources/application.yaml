@@ -12,6 +12,11 @@ eureka:
     region: ${region:us-east-1}
 server:
   port: 8080
+zuul:
+  routes:
+    book-manager:
+       path: /book-manager/**
+       serviceId: book-manager
 management:
   endpoints:
     web:
