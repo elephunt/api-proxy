@@ -5,7 +5,7 @@ eureka:
   instance:
     prefer-ip-address: ${preferIp:true}
   client:
-    register-with-eureka: ${registerWithEureka:false}
+    register-with-eureka: ${registerWithEureka:true}
     fetch-registry: ${fetchRegistry:true}
     service-url:
       defaultZone: ${deafultZone:http://172.31.17.185:8761/eureka}
