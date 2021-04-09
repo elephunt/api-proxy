@@ -4,7 +4,6 @@ spring:
 eureka:
   instance:
     prefer-ip-address: ${preferIp:true}
-    data-center-info: ${dataCenter:Amazon}
   client:
     register-with-eureka: ${registerWithEureka:true}
     fetch-registry: ${fetchRegistry:true}
