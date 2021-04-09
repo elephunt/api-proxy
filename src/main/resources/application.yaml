@@ -5,9 +5,10 @@ eureka:
   instance:
     prefer-ip-address: ${preferIp:true}
   client:
-    register-with-eureka: ${registerWithEureka:true}
+    register-with-eureka: ${registerWithEureka:false}
     fetch-registry: ${fetchRegistry:true}
     service-url:
-       defaultZone: ${defaultZone:http://172.31.17.185:8761/eureka}
+      defaultZone: ${deafultZone:http://172.31.17.185:8761/eureka}
+    region: ${region:us-east-1}
 server:
   port: 80
