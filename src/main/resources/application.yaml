@@ -11,7 +11,7 @@ eureka:
       defaultZone: ${deafultZone:http://172.31.17.185:8761/eureka}
     region: ${region:us-east-1}
 server:
-  port: 80
+  port: 8080
 management:
   endpoints:
     web:
