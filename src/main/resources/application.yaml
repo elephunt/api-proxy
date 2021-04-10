@@ -5,8 +5,8 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
-          lower-case-service-id: true
+          enabled: ${locator:true}
+          lower-case-service-id: ${lowerCase:true}
 eureka:
   instance:
     prefer-ip-address: ${preferIp:true}
