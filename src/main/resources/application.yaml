@@ -1,6 +1,16 @@
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: book-manager
+          uri: lb://book-manager # netflix eureka correspondent service
+          predicates:
+            - Path=/book-manager/** # how we will map the url to the target service
 eureka:
   instance:
     prefer-ip-address: ${preferIp:true}
@@ -12,11 +22,6 @@ eureka:
     region: ${region:us-east-1}
 server:
   port: 8080
-zuul:
-  routes:
-    book-manager:
-       path: /book-manager/**
-       serviceId: book-manager
 management:
   endpoints:
     web:
