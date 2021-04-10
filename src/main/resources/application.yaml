@@ -6,11 +6,7 @@ spring:
       discovery:
         locator:
           enabled: true
-      routes:
-        - id: book-manager
-          uri: lb://book-manager # netflix eureka correspondent service
-          predicates:
-            - Path=/book-manager/** # how we will map the url to the target service
+          lower-case-service-id: true
 eureka:
   instance:
     prefer-ip-address: ${preferIp:true}
@@ -22,8 +18,3 @@ eureka:
     region: ${region:us-east-1}
 server:
   port: 8080
-management:
-  endpoints:
-    web:
-      exposure:
-        include=*:
