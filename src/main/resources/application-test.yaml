@@ -1,3 +1,9 @@
 eureka:
   client:
     register-with-eureka: false
+spring:
+  cloud:
+    gateway:
+      enabled: false
+    discovery:
+      enabled: false
