@@ -14,7 +14,7 @@ eureka:
     register-with-eureka: ${registerWithEureka:true}
     fetch-registry: ${fetchRegistry:true}
     service-url:
-      defaultZone: ${deafultZone:http://172.31.17.185:8761/eureka}
+      defaultZone: ${defaultZone:http://localhost:8761/eureka}
     region: ${region:us-east-1}
 server:
   port: 8080
