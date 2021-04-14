@@ -23,3 +23,10 @@ management:
     web:
       exposure:
         include: '*'
+keyCloak:
+  serverUrl: ${keyCloakUrl:http://172.31.25.11:8080/auth}
+  realm: ${keyCloakRealm:spring-boot-gateway}
+  clientId: ${clientId:spring-boot-gateway}
+  clientSecret: ${clientSecret:2f4158ea-cbf2-40df-bea3-8a0b1ba66011}
+  userName: ${keyCloakUserName:admin}
+  password: ${password:admin}
